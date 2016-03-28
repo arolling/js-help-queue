@@ -1,1 +1,22 @@
+<h1>All Current Tickets</h1>
+<div class="row">
+  <div class="col-md-6">
+    <ul class="list-group">
+      {{#each model as |ticket|}}
+        <li class="list-group-item">
+          <h4 class="list-group-item-heading">{{ticket.client}}</h4>
+          <p class="list-group-item-text">{{ticket.description}}</p>
+          <p class="list-group-item-text">{{ticket.time}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <button type="button" name="button" class="btn-lg btn-success">{{#link-to 'index'}}Go Home{{/link-to}}</button>
+    <button type="button" name="button" class="btn-lg btn-danger">{{#link-to 'add-ticket'}}New Tickets{{/link-to}}</button>
+  </div>
+
+</div>
+
+
 {{outlet}}
